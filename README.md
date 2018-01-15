@@ -1,4 +1,4 @@
-# [RCDOSADO](https://github.com/rcdosado)’s dotfiles 
+# [rcdosado](https://github.com/rcdosado)’s dotfiles 
 
 These are the base dotfiles that I start with when I set up a new environment. This is taken from Cătălin Mariș dotfiles, so most of the stuff in here is his, For more specific local needs I use the `.local` files described in the [`Local Settings`](#local-settings) section.
 
