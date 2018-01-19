@@ -163,6 +163,9 @@ set textwidth=100
 set wildmenu
 set noshowmode
 set cmdheight=1
+"set magic
+"set scrolloff=23
+
 
 " set autoread
 
@@ -196,7 +199,7 @@ map <f12> :set list!<cr>
 :set list!
 
 set list
-set listchars=tab:▸\ ,trail:¬,nbsp:.,extends:❯,precedes:❮
+set listchars=tab:▸\ ,eol:↴,trail:¬,nbsp:.,extends:❯,precedes:❮
 augroup ListChars2
     au!
     autocmd filetype go set listchars+=tab:\ \
@@ -653,3 +656,11 @@ set cursorline
 set cursorcolumn
 hi CursorLine   cterm=NONE ctermbg=237 ctermfg=NONE guibg=darkred guifg=white
 hi CursorColumn cterm=NONE ctermbg=235 ctermfg=NONE guibg=darkred guifg=white
+
+"2018 updates
+set ttyfast
+
+" Limit syntax highlighting (this
+" avoids the very slow redrawing
+" when files contain long lines).
+set synmaxcol=2500
