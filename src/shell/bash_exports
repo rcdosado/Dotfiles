@@ -80,3 +80,9 @@ export PYTHONIOENCODING="UTF-8"
 # this is for virtualenvwrapper
 
 export WORKON_HOME=~/.virtualenvs
+
+# for golang
+export GOROOT=/usr/lib/go
+export GOBIN=/usr/bin/go
+export GOPATH="$HOME/workspace"
+
