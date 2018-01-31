@@ -68,7 +68,9 @@ NeoBundle "othree/javascript-libraries-syntax.vim"
 
 NeoBundle "fatih/vim-go"
 " Bundle "klen/python-mode"
-NeoBundle "plasticboy/vim-markdown"
+
+" disabled due to slowness
+" NeoBundle "plasticboy/vim-markdown"
 
 NeoBundle "vim-scripts/c.vim"
 
@@ -117,8 +119,6 @@ NeoBundle "mattn/emmet-vim"
 " Doc helpers __rcd__
 NeoBundle "KabbAmine/zeavim.vim" 
 
-" Auto-pairs settings
-let g:AutoPairsFlyMode = 1
 
 " enable all the plugins
 " filetype plugin indent on
@@ -199,7 +199,7 @@ map <f12> :set list!<cr>
 :set list!
 
 set list
-set listchars=tab:▸\ ,eol:↴,trail:¬,nbsp:.,extends:❯,precedes:❮
+set listchars=tab:▸\ ,trail:¬,nbsp:.,extends:❯,precedes:❮
 augroup ListChars2
     au!
     autocmd filetype go set listchars+=tab:\ \
@@ -384,6 +384,9 @@ vnoremap <leader>s :%s /
 " Use :Subvert replace
 nnoremap <leader>S :%S /
 vnoremap <leader>S :%S /
+
+" Auto-pairs settings
+let g:AutoPairsFlyMode = 1
 
 " clever-f prompt
 let g:clever_f_show_prompt = 1
@@ -648,12 +651,17 @@ endif
 
 " color schemes
 "colorscheme desert
-colorscheme solarized
-"colorscheme candyman
+"colorscheme solarized
+colorscheme candyman
+"colorscheme winter
 "colorscheme bubblegum
 
+"allows you to display a horizontal highlight line
 set cursorline
-set cursorcolumn
+
+"allows you to display columnar line
+"set cursorcolumn
+
 hi CursorLine   cterm=NONE ctermbg=237 ctermfg=NONE guibg=darkred guifg=white
 hi CursorColumn cterm=NONE ctermbg=235 ctermfg=NONE guibg=darkred guifg=white
 
@@ -664,3 +672,7 @@ set ttyfast
 " avoids the very slow redrawing
 " when files contain long lines).
 set synmaxcol=2500
+
+"TERN JS config 
+let g:tern#command = ['node',expand('~').'/.nvm/versions/node/v9.4.0/bin/tern']
+
