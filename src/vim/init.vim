@@ -676,3 +676,8 @@ set synmaxcol=2500
 "TERN JS config 
 let g:tern#command = ['node',expand('~').'/.nvm/versions/node/v9.4.0/bin/tern']
 
+" formmating js with prettier
+autocmd FileType javascript set formatprg=prettier\ --stdin
+" format on save 
+autocmd BufWritePre *.js :normal gggqG
+
